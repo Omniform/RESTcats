@@ -19,6 +19,7 @@ namespace CatsTestProject1
                 //   "Data Source=mssql7.unoeuro.com;Initial Catalog=FROM simply.com;Persist Security Info=True;User ID=FROM simply.com;Password=DB PASSWORD FROM simply.com;TrustServerCertificate=True"
                 CatsDbContext _dbContext = new(optionsBuilder.Options);
                 // clean database table: remove all rows
+
                 _dbContext.Database.ExecuteSqlRaw("TRUNCATE TABLE dbo.Cats");
                 repo = new CatsRepositoryDatabase(_dbContext);
             }
