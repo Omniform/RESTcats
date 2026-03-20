@@ -30,7 +30,7 @@ jobs:
 
     - name: Start API i baggrunden
       # Skift stien ud med stien til jeres .csproj fil for API'et
-      run: dotnet run --projects ./src/RESTcats/RESTcats.csproj &
+      run: dotnet run --projects RESTcats/RESTcats.csproj &
       env:
         ASPNETCORE_URLS: http://localhost:5000
 
