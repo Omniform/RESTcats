@@ -30,7 +30,7 @@ jobs:
 
     - name: Start API i baggrunden
       # Skift stien ud med stien til jeres .csproj fil for API'et
-      run: dotnet run --project src/MitApiProjekt/MitApiProjekt.csproj &
+      run: dotnet run --projects src/RESTcats/RESTcats.csproj &
       env:
         ASPNETCORE_URLS: http://localhost:5000
 
@@ -43,4 +43,4 @@ jobs:
     - name: Kør Postman Tests
       # Skift stien ud til jeres eksporterede JSON-fil. 
       # Overvej at sende baseUrl med som en variabel, hvis jeres tests kræver det.
-      run: newman run postman-tests/min-collection.json --env-var "baseUrl=http://localhost:5000”
+      run: newman run Postman-Tests/api-test.json --env-var "baseUrl=http://localhost:5000”
