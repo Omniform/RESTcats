@@ -3,7 +3,7 @@
     public class CatsRepositoryList : ICatsRepository
     {
         private readonly List<Cat> cats = new();
-        private int nextId = 2;
+        private int nextId = 1;
 
         public CatsRepositoryList(bool includeData = false)
         {
